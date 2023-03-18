@@ -56,7 +56,7 @@ body {
   }
 
 /* media query */
-@media screen and (max-width: 500px) {
+@media screen and (max-width: 580px) {
     .user-cards {
         background-color: rgba(136, 135, 135, 0.801);
         height: 450px;
@@ -64,6 +64,10 @@ body {
         overflow-y: scroll;
         margin-bottom: 10%;
         box-shadow: 0 4px 41px rgba(250, 252, 252, 0.14);
+    }
+
+    .main-heading {
+        width: 400px;
     }
 }
 
@@ -77,6 +81,10 @@ body {
         margin-bottom: 10%;
         box-shadow: 0 4px 41px rgba(250, 252, 252, 0.14);
     }
+
+    .main-heading {
+        width: 300px;
+    }
 }
 
 @media screen and (max-width: 320px) {
@@ -88,5 +96,9 @@ body {
         overflow-x: scroll;
         margin-bottom: 10%;
         box-shadow: 0 4px 41px rgba(250, 252, 252, 0.14);
+    }
+
+    .main-heading {
+        width: 250px;
     }
 }
