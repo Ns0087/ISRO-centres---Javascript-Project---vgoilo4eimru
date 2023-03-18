@@ -52,4 +52,41 @@ body {
 /* for selected button */
 .focus {
     background-color: #0d50b6;
+
+  }
+
+/* media query */
+@media screen and (max-width: 500px) {
+    .user-cards {
+        background-color: rgba(136, 135, 135, 0.801);
+        height: 450px;
+        width:400px;
+        overflow-y: scroll;
+        margin-bottom: 10%;
+        box-shadow: 0 4px 41px rgba(250, 252, 252, 0.14);
+    }
+}
+
+@media screen and (max-width: 420px) {
+    .user-cards {
+        background-color: rgba(136, 135, 135, 0.801);
+        height: 450px;
+        width: 300px;;
+        overflow-y: scroll;
+        overflow-x: scroll;
+        margin-bottom: 10%;
+        box-shadow: 0 4px 41px rgba(250, 252, 252, 0.14);
+    }
+}
+
+@media screen and (max-width: 320px) {
+    .user-cards {
+        background-color: rgba(136, 135, 135, 0.801);
+        height: 450px;
+        width: 250px;;
+        overflow-y: scroll;
+        overflow-x: scroll;
+        margin-bottom: 10%;
+        box-shadow: 0 4px 41px rgba(250, 252, 252, 0.14);
+    }
 }
