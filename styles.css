@@ -1,1 +1,55 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    color: #ffffff;
+}
 
+body {
+    background-color: #f5f5f5;
+    background-image: url("spaceBackground.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+
+.container {
+    width: 100%;
+}
+
+.wrapper {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+/* for selected button */
+.heading {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+}
+
+.card {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    background-color: blueviolet;
+    margin-bottom: 10px;
+}
+
+.user-cards {
+    background-color: rgba(136, 135, 135, 0.801); 
+    height: 450px; 
+    overflow-y: scroll; 
+    margin-bottom: 10%; 
+    box-shadow: 0 4px 41px rgba(250, 252, 252, 0.14);
+}
+
+/* for selected button */
+.focus {
+    background-color: #0d50b6;
+}
