@@ -1,84 +1,88 @@
 <!DOCTYPE html>
 <html lang="en">
 
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="author" content="Nitin Saraswat">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    
-    <title>ISRO Centres</title>
-    <link rel="icon" type="image/x-icon" href="https://notion-emojis.s3-us-west-2.amazonaws.com/prod/svg-twitter/1f30c.svg">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="author" content="Nitin Saraswat">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css"
-        integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
-    <link rel="stylesheet" href="styles.css">
-</head>
+        <title>ISRO Centres</title>
+        <link rel="icon" type="image/x-icon"
+            href="https://notion-emojis.s3-us-west-2.amazonaws.com/prod/svg-twitter/1f30c.svg">
 
-<body onload="getapi()">
+        <link rel="stylesheet"
+            href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css"
+            integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
+        <link rel="stylesheet" href="styles.css">
+    </head>
 
-    <div class="container">
-        <div class="wrapper">
+    <body onload="getapi()">
 
-            <!-- Logo -->
-            <img src="https://notion-emojis.s3-us-west-2.amazonaws.com/prod/svg-twitter/1f30c.svg" width="78px"
-                height="78px">
+        <div class="container">
+            <div class="wrapper">
 
-            <!-- Heading -->
-            <h1>ISRO centres</h1>
-            <div class="heading">
-                <img src="space.jpg" alt="ISRO" width="70px" height="72px">
-                <h4>Indian Space Research Organisation</span></h4>
-            </div>
-            <div class="main-heading">
-                <h2>Search for ISRO centres based on place, state and name</h2>
-            </div>
+                <!-- Logo -->
+                <img src="https://notion-emojis.s3-us-west-2.amazonaws.com/prod/svg-twitter/1f30c.svg" width="78px"
+                    height="78px">
 
-            <!-- Search Bar -->
-            <form>
-                <div class="search input-group" style="padding: 10% 0%;">
-                    <input type="text" id="search" class="form-control rounded" placeholder="Search">
-                    <button id="search-button" class="btn btn-success">
-                        <i class="fa fa-search"></i>
-                    </button>
-
-                    <!-- Flag Buttons -->
-                    <button type="button" id="city" class="btn btn-primary flag-btn">City</button>
-                    <button type="button" id="state" class="btn btn-primary flag-btn">State</button>
-                    <button type="button" id="name" class="btn btn-primary flag-btn">Center</button>
+                <!-- Heading -->
+                <h1>ISRO centres</h1>
+                <div class="heading">
+                    <img src="space.jpg" alt="ISRO" width="70px" height="72px">
+                    <h4>Indian Space Research Organisation</span></h4>
                 </div>
-            </form>
-
-            <!-- Loader -->
-            <div class="d-flex justify-content-center loader">
-                <div class="spinner-border" role="status" id="loading">
+                <div class="main-heading">
+                    <h2>Search for ISRO centres based on place, state and name</h2>
                 </div>
-                <span class="sr-only" id="loadingSpan">Loading...</span>
-            </div>
 
-            <!-- Main -->
-            <div class="user-cards">
-                <!-- table for showing data -->
-                <table id="isroCenters" class="table table-hover">
-                    <thead>
-                        <tr class="table-dark" style="width: 100%; position: sticky; top: 0;" >
-                            <th scope="col">S.no</th>
-                            <th scope="col">Center Name</th>
-                            <th scope="col">City</th>
-                            <th scope="col">State</th>
-                        </tr>
-                    </thead>
-                    <tbody id="isroCenters-body">
-                        
-                    </tbody>
-                </table>
-            </div>
+                <!-- Search Bar -->
+                <form>
+                    <div class="search input-group" style="padding: 10% 0%;">
+                        <input type="text" id="search" class="form-control rounded" placeholder="Search">
+                        <button id="search-button" class="btn btn-success">
+                            <i class="fa fa-search"></i>
+                        </button>
 
+                        <!-- Flag Buttons -->
+                        <button type="button" id="city" class="btn btn-primary flag-btn">City</button>
+                        <button type="button" id="state" class="btn btn-primary flag-btn">State</button>
+                        <button type="button" id="name" class="btn btn-primary flag-btn">Center</button>
+                        <button type="button" id="savedCenters" class="btn btn-primary flag-btn">Saved Centers</button>
+                    </div>
+                </form>
+
+                <!-- Loader -->
+                <div class="d-flex justify-content-center loader">
+                    <div class="spinner-border" role="status" id="loading">
+                    </div>
+                    <span class="sr-only" id="loadingSpan">Loading...</span>
+                </div>
+
+                <!-- Main -->
+                <div class="user-cards">
+                    <!-- table for showing data -->
+                    <table id="isroCenters" class="table table-hover">
+                        <thead>
+                            <tr class="table-dark" style="width: 100%; position: sticky; top: 0;">
+                                <th scope="col">S.no</th>
+                                <th scope="col">Center Name</th>
+                                <th scope="col">City</th>
+                                <th scope="col">State</th>
+                                <th scope="col">Action</th>
+                            </tr>
+                        </thead>
+                        <tbody id="isroCenters-body">
+
+                        </tbody>
+                    </table>
+                </div>
+
+            </div>
         </div>
-    </div>
 
-    <script src="App.js"></script>
-</body>
+        <script src="App.js"></script>
+    </body>
 
 </html>
